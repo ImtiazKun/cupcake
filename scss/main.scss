@@ -3,7 +3,6 @@
 
 body{
     font-family: $p-font;
-    height: 1000px;
     margin: 0;
     @include anchor;
 }
@@ -56,5 +55,33 @@ header{
         text-align: center;
         margin-top: -5rem;
     }
+
+    img{
+        border: 1em solid white;
+    }
+
+    div{
+        position: relative;
+        margin-top: 50px;
+        .circle-1, .circle-2{
+            position: absolute;
+            @include circle;
+            background-color: yellow;
+            z-index: -1;
+        }
+
+        .circle-1{
+            top: -5em;
+            left: -2em;
+            padding: 3em;
+        }
+
+        .circle-2{
+            bottom: 4em;
+            right: -3em;
+            padding: 4em;
+        }
+    }
 }
+
 
