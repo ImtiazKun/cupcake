@@ -13,6 +13,7 @@ body{
 
 
 .navigation{
+    z-index: 1;
     font-family: $primary-font, serif;
     position: fixed;
     top: 0;
@@ -84,4 +85,99 @@ header{
     }
 }
 
+.watch{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 226, 226);
+    h1{
+        font-weight: lighter;
+        font-family: 'Lobster Two', cursive;
+        font-size: 2em;
+    }
+}
 
+
+.container{
+    margin: 1em 5em;
+}
+
+
+h2{
+    font-family: $primary-font;
+    font-weight: lighter;
+    margin: 2em 0;
+    position: relative;
+}
+
+h2::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-bottom: 0.1em solid black ;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column{
+    flex: 20%;
+
+}
+
+.column > div{
+    img{
+        width: 100%;
+    }
+    border: .5em solid white;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+}
+
+.column >div::before{
+        content: "Cupcake";
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(5, 5, 5, 0.774);
+        color: white;
+        font-size: 2em;
+        font-family: 'Lobster Two', cursive;
+        transition: opacity 0.4s;
+}
+
+.column >div:hover:before{
+    opacity: 1;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
