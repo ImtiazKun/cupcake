@@ -3,6 +3,7 @@
 
 body{
     font-family: $p-font;
+    height: 1000px;
     margin: 0;
     @include anchor;
 }
@@ -14,6 +15,11 @@ body{
 
 .navigation{
     font-family: $primary-font, serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
 
     .flex{
         @include flexCenter;
@@ -38,3 +44,18 @@ body{
     }
 
 }
+
+
+header{
+    font-family: $primary-font;
+    height: 100vh;
+    display: flex;
+    @include flexCenter;
+    border: 1px solid red;
+    h1{
+        font-size: 6rem;
+        text-align: center;
+        margin-top: -5rem;
+    }
+}
+
