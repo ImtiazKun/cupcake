@@ -1,0 +1,11 @@
+@mixin anchor {
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@mixin  flexCenter {
+    align-items: center;
+    justify-content: center;
+}

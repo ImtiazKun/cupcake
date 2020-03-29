@@ -1,0 +1,40 @@
+@import 'variables';
+@import 'mixins';
+
+body{
+    font-family: $p-font;
+    margin: 0;
+    @include anchor;
+}
+
+.flex{
+    display: flex;
+}
+
+
+.navigation{
+    font-family: $primary-font, serif;
+
+    .flex{
+        @include flexCenter;
+        justify-content: space-between;
+        margin: 1rem 2rem;
+    }
+    
+    .brand{
+        font-weight: normal;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    ul li{
+        padding: 0;
+        display: inline;
+        margin-right: 1rem;
+    }
+
+}
