@@ -51,7 +51,6 @@ header{
     height: 100vh;
     display: flex;
     @include flexCenter;
-    border: 1px solid red;
     h1{
         font-size: 6rem;
         text-align: center;
